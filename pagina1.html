@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <script>
+        function changetoBirth() {
+            var nombre = document.getElementById("nombre");
+            nombre.innerHTML = "17/02/1998";
+        }
+
+        function changeColor() {
+            var nombre = document.getElementById("nombre");
+            nombre.style.color = "green";
+            nombre.style.backgroundColor = "rgb(153, 204, 255)";
+        }
+
+        function alignLeft() {
+            var texto = document.getElementById("texto");
+            texto.style.textAlign = "left";
+        }
+        function alignMid() {
+            var texto = document.getElementById("texto");
+            texto.style.textAlign = "center";
+        }
+        function alignRight() {
+            var texto = document.getElementById("texto");
+            texto.style.textAlign = "right";
+        }
+
+        var i = 100;
+
+        function zoomIn() {
+            document.getElementById("texto").style.fontSize = i + "%";
+            i += 50;
+        }
+        function restore() {
+            document.getElementById("texto").style.fontSize = "initial";
+        }
+
+        function hideDiv() {
+            var x = document.getElementById("divHide");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="./index.html">Tarea JS</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./pagina1.html">Página 1 <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./pagina2.html">Página 2</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./pagina3.html">Página 3</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./pagina4.html">Página 4
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h4 id="nombre">Dennis Andrés Chicaiza Acosta.</h4>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button id="boton1" type="button" onclick="changetoBirth()" class="btn btn-success btn-block">Ver fecha
+                    nacimiento</button>
+                <button id="boton2" type="button" onclick="changeColor()" class="btn btn-danger btn-block">Cambiar
+                    color</button>
+
+            </div>
+        </div>
+        <div id="divHide" class="row mt-5">
+            <div class="col-md-10">
+                <p id="texto">Herramientas de programación</p>
+            </div>
+            <div class="col-md-2">
+                <button id="alinLeft" type="button" onclick="alignLeft()" class="btn btn-primary btn-block">Alinear
+                    Izquierda</button>
+                <button id="alinMid" type="button" onclick="alignMid()" class="btn btn-primary btn-block">Alinear
+                    Medio</button>
+                <button id="alinRight" type="button" onclick="alignRight()" class="btn btn-primary btn-block">Alinear
+                    derecha</button>
+                <button id="botonZoom" type="button" onclick="zoomIn()" class="btn btn-dark btn-block">Zoom
+                    In</button>
+                <button id="botonRestore" type="button" onclick="restore()" class="btn btn-dark btn-block">Restaurar
+                </button>
+            </div>
+            
+        </div>
+        <div class="row mt-2">
+            
+            <div class="col-md-2">
+                <button id="botonHide" type="button" onclick="hideDiv()" class="btn btn-dark btn-block">Ocultar div
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center; margin-top: 6rem;">
+        <b>Developed by Dennis.</b>
+    </footer>
+</body>
+
+</html>
