@@ -7,38 +7,79 @@
     <title>Página 3</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <script>
+        function createTable() {
+            var nombres = [""]
+            var tabla = document.getElementById("tabla");
+            var thead = '<table class="table table-striped"><thead><tr><th scope="col">Col 1</th><th scope="col">Col 2</th></tr></thead>';
+            var tbody = '<tbody><tr><th scope="row">1</th><td>Mark</td>';
+            for (let i = 1; i < 5; i++) {
+                tbody += '<tr><th scope="row">' + (i + 1) + '</th><td>Mark</td>';
+            }
+            var endtable = '</tbody></table>';
+            tabla.innerHTML = thead + tbody + endtable;
+        }
+    </script>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
             <div class="col">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="./index.html">Tarea JS</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="./index.html">Tarea JS</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./pagina1.html">Página 1</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./pagina2.html">Página 2 </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./pagina3.html">Página 3<span
-                              class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./pagina4.html">Página 4 </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./pagina1.html">Página 1</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./pagina2.html">Página 2 </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./pagina3.html">Página 3<span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./pagina4.html">Página 4 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button id="botonTabla" type="button" onclick="createTable()" class="btn btn-primary btn-block">Crear
+                    tabla</button>
+                <p id="tabla"></p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p id="par1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis praesentium non itaque
+                    dignissimos rem at nihil unde maxime velit, earum aliquam libero neque incidunt fugiat nostrum
+                    laudantium ullam assumenda quaerat!</p>
+                <p id="par2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit, culpa quisquam in,
+                    quasi odio eligendi, voluptas asperiores pariatur enim maxime dolore laboriosam voluptate. Voluptate
+                    repellendus debitis nemo rem eum.</p>
+                <p id="par3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque perferendis ducimus omnis!
+                    Recusandae placeat ratione iure. Culpa consectetur non tenetur! Voluptatum deserunt quaerat iste
+                    dolorum beatae eius velit eum molestiae.</p>
+                <p id="par4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia optio, molestiae aperiam
+                    accusantium iusto eaque consequatur, placeat provident repellendus cupiditate similique illum. Vitae
+                    id voluptatibus facilis iusto, eaque tempore maxime!</p>
+                <p id="par5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus officiis
+                    laboriosam, distinctio eligendi excepturi provident sapiente nesciunt ex harum illo, consequatur
+                    labore sequi hic omnis. Quam rerum nisi quod. Quae?</p>
             </div>
         </div>
     </div>

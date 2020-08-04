@@ -7,6 +7,49 @@
     <title>Página 4</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+    <script>
+        function myMove() {
+            var elem = document.getElementById("animate");
+            var pos = 0;
+            var id = setInterval(frame, 5);
+            var bandera = false;
+            function frame() {
+                if (pos < 350 && bandera == false) {
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                } else {
+                    if (pos > 0) {
+                        bandera = true;
+                        pos--;
+                        elem.style.top = pos + "px";
+                        elem.style.left = pos + "px";
+                    } else if (pos == 0) {
+                        clearInterval(id);
+                    }
+                }
+                console.log("Top:" + elem.style.top);
+                console.log("Left:" + elem.style.left);
+                console.log("--------------------");
+
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -39,6 +82,17 @@
                         </ul>
                     </div>
                 </nav>
+
+                <div class="row mt-5">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <p><button onclick="myMove()">Click Me</button></p>
+
+                        <div id="container">
+                            <div id="animate"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
