@@ -19,6 +19,25 @@
             var endtable = '</tbody></table>';
             tabla.innerHTML = thead + tbody + endtable;
         }
+        var i = 0;
+        function parrafos() {
+            var res = "";
+
+            var sizes = ["xx-small", "x-small", "small", "medium", "large", "x-large", "xx-large"];
+            if (i == sizes.length) {
+                i = 0;
+            }
+            document.getElementById("par1").style.fontSize = sizes[i];
+            document.getElementById("par2").style.fontSize = sizes[i];
+            document.getElementById("par3").style.fontSize = sizes[i];
+            document.getElementById("par4").style.fontSize = sizes[i];
+            document.getElementById("par5").style.fontSize = sizes[i];
+            
+            i++;
+
+        }
+
+
     </script>
 </head>
 
@@ -65,21 +84,33 @@
         <div class="row mt-5">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <p id="par1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis praesentium non itaque
+                <p id="par1"> <b>1.</b> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis praesentium non
+                    itaque
                     dignissimos rem at nihil unde maxime velit, earum aliquam libero neque incidunt fugiat nostrum
                     laudantium ullam assumenda quaerat!</p>
-                <p id="par2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit, culpa quisquam in,
+                <p id="par2"><b>2.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit, culpa
+                    quisquam in,
                     quasi odio eligendi, voluptas asperiores pariatur enim maxime dolore laboriosam voluptate. Voluptate
                     repellendus debitis nemo rem eum.</p>
-                <p id="par3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque perferendis ducimus omnis!
+                <p id="par3"><b>3.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque perferendis
+                    ducimus omnis!
                     Recusandae placeat ratione iure. Culpa consectetur non tenetur! Voluptatum deserunt quaerat iste
                     dolorum beatae eius velit eum molestiae.</p>
-                <p id="par4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia optio, molestiae aperiam
+                <p id="par4"><b>4.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia optio,
+                    molestiae aperiam
                     accusantium iusto eaque consequatur, placeat provident repellendus cupiditate similique illum. Vitae
                     id voluptatibus facilis iusto, eaque tempore maxime!</p>
-                <p id="par5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus officiis
+                <p id="par5"><b>5.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus officiis
                     laboriosam, distinctio eligendi excepturi provident sapiente nesciunt ex harum illo, consequatur
                     labore sequi hic omnis. Quam rerum nisi quod. Quae?</p>
+            </div>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button id="botonTabla" type="button" onclick="parrafos()"
+                    class="btn btn-primary btn-block">Resize</button>
             </div>
         </div>
     </div>
